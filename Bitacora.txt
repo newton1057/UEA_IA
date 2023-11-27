@@ -1,0 +1,43 @@
+Algoritmo Backtracking 🚀
+Limite de profundidad: 10
+
+Nivel: 0
+Tablero
+[' ', '|', ' ']
+['*', ' ']
+Estado para el tablero: 1422721372643351810
+
+Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
+Nivel: 1
+Tablero
+[' ', '|', ' ']
+[' ', '*']
+Estado para el tablero: -8351023195784705490
+
+Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 3
+Nivel: 1
+Tablero
+['*', '|', ' ']
+[' ', ' ']
+Estado para el tablero: -2640897545318323853
+
+Ficha Amarilla 🟨 Movimiento Realizado: Regla 6
+Nivel: 2
+Tablero
+['*', ' ', ' ']
+[' ', '|']
+Estado para el tablero: -5455900643573570355
+
+Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
+Nivel: 3
+Tablero
+[' ', '*', ' ']
+[' ', '|']
+Estado para el tablero: 6830828566988113333
+
+Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
+Nivel: 4
+Tablero
+[' ', ' ', '*']
+[' ', '|']
+🚀 Solucion Encontrada 🚀
