@@ -1,39 +1,45 @@
-Algoritmo Backtracking 🚀
-Limite de profundidad: 10
+Algoritmo por Amplitud 🚀
 
 Nivel: 0
 Tablero
 [' ', '|', ' ']
 ['*', ' ']
-Estado para el tablero: 1422721372643351810
+Estado para el tablero: -2699194395970040583
 
 Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
+Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 3
+Ficha Amarilla 🟨 ✅ Movimiento Realizado: Regla 6
 Nivel: 1
 Tablero
 [' ', '|', ' ']
 [' ', '*']
-Estado para el tablero: -8351023195784705490
+Estado para el tablero: 4044102320387403320
 
-Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 3
 Nivel: 1
 Tablero
 ['*', '|', ' ']
 [' ', ' ']
-Estado para el tablero: -2640897545318323853
+Estado para el tablero: -8299580375770618259
 
-Ficha Amarilla 🟨 Movimiento Realizado: Regla 6
+Ficha Amarilla 🟨 ✅ Movimiento Realizado: Regla 6
+Nivel: 1
+Tablero
+[' ', ' ', ' ']
+['*', '|']
+Estado para el tablero: 6792233487747591791
+
 Nivel: 2
 Tablero
 ['*', ' ', ' ']
 [' ', '|']
-Estado para el tablero: -5455900643573570355
+Estado para el tablero: -4084311076764199136
 
 Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
 Nivel: 3
 Tablero
 [' ', '*', ' ']
 [' ', '|']
-Estado para el tablero: 6830828566988113333
+Estado para el tablero: -1408658083442976454
 
 Ficha Roja 🟥 ✅ Movimiento Realizado: Regla 1
 Nivel: 4
