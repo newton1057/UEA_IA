@@ -1,0 +1,47 @@
+
+Por Amplitud 🚀
+Nivel: 0
+['A', 'B', 'C']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 1
+['A', 'B']
+['C']
+[]
+Por Amplitud 🚀
+Nivel: 2
+['A']
+['C']
+['B']
+Por Amplitud 🚀
+Nivel: 2
+['A']
+['C', 'B']
+[]
+Por Amplitud 🚀
+Nivel: 3
+['A']
+[]
+['B', 'C']
+Por Amplitud 🚀
+Nivel: 3
+['A', 'C']
+[]
+['B']
+Por Amplitud 🚀
+Nivel: 3
+[]
+['C']
+['B', 'A']
+Por Amplitud 🚀
+Nivel: 3
+[]
+['C', 'A']
+['B']
+Por Amplitud 🚀
+Nivel: 3
+[]
+['C', 'B', 'A']
+[]
+🚀 Solucion Encontrada 🚀
