@@ -1,47 +1,223 @@
-
 Por Amplitud 🚀
 Nivel: 0
-['A', 'B', 'C']
+['A', 'B', 'C', 'D']
+[]
 []
 []
 Por Amplitud 🚀
 Nivel: 1
+['A', 'B', 'C']
+['D']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 2
 ['A', 'B']
+['D']
 ['C']
 []
 Por Amplitud 🚀
 Nivel: 2
+['A', 'B']
+['D', 'C']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 3
+['A', 'B']
+[]
+['C', 'D']
+[]
+Por Amplitud 🚀
+Nivel: 3
+['A', 'B', 'D']
+[]
+['C']
+[]
+Por Amplitud 🚀
+Nivel: 3
 ['A']
+['D']
 ['C']
 ['B']
 Por Amplitud 🚀
-Nivel: 2
+Nivel: 3
 ['A']
+['D', 'B']
+['C']
+[]
+Por Amplitud 🚀
+Nivel: 3
+['A']
+['D']
 ['C', 'B']
 []
 Por Amplitud 🚀
 Nivel: 3
 ['A']
+['D', 'C']
+['B']
+[]
+Por Amplitud 🚀
+Nivel: 3
+['A']
+['D', 'C', 'B']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['B']
+['C', 'D']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A']
+[]
+['C', 'D', 'B']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A', 'B', 'D', 'C']
+[]
+[]
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A']
+[]
+['C', 'D']
+['B']
+Por Amplitud 🚀
+Nivel: 4
+['A']
+[]
+['C']
+['B', 'D']
+Por Amplitud 🚀
+Nivel: 4
+['A', 'D']
+[]
+['C']
+['B']
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['D', 'C']
+[]
+['B']
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['D']
 []
 ['B', 'C']
 Por Amplitud 🚀
-Nivel: 3
+Nivel: 4
 ['A', 'C']
+['D']
 []
 ['B']
 Por Amplitud 🚀
-Nivel: 3
+Nivel: 4
 []
+['D', 'A']
 ['C']
-['B', 'A']
+['B']
 Por Amplitud 🚀
-Nivel: 3
+Nivel: 4
 []
+['D']
 ['C', 'A']
 ['B']
 Por Amplitud 🚀
-Nivel: 3
+Nivel: 4
 []
+['D']
+['C']
+['B', 'A']
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['D', 'B', 'C']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A', 'C']
+['D', 'B']
+[]
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'B']
+['C', 'A']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'B', 'A']
+['C']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A']
+[]
+['C', 'B', 'D']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A', 'D']
+[]
+['C', 'B']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'A']
+['C', 'B']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D']
 ['C', 'B', 'A']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['D']
+['B']
+['C']
+Por Amplitud 🚀
+Nivel: 4
+['A']
+['D']
+['B', 'C']
+[]
+Por Amplitud 🚀
+Nivel: 4
+['A', 'C']
+['D']
+['B']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'C', 'A']
+['B']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'C']
+['B', 'A']
+[]
+Por Amplitud 🚀
+Nivel: 4
+[]
+['D', 'C', 'B', 'A']
+[]
 []
 🚀 Solucion Encontrada 🚀
