@@ -221,3 +221,105 @@ Nivel: 4
 []
 []
 🚀 Solucion Encontrada 🚀
+Backtracking 🔄
+Nivel de Profundidad: 0
+['A', 'B', 'C']
+[]
+[]
+Regla de movimiento aplicada: 1
+Backtracking 🔄
+Nivel de Profundidad: 1
+['A', 'B']
+['C']
+[]
+Regla de movimiento aplicada: 2
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 4
+Backtracking 🔄
+Nivel de Profundidad: 2
+['A']
+['C']
+['B']
+Regla de movimiento aplicada: 2
+Backtracking 🔄
+Nivel de Profundidad: 3
+['A']
+[]
+['B', 'C']
+Regla de movimiento aplicada: 1
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 3
+Backtracking 🔄
+Nivel de Profundidad: 4
+['A', 'C']
+[]
+['B']
+Regla de movimiento aplicada: 1
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 2
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 5
+Backtracking 🔄
+Nivel de Profundidad: 5
+['A', 'C', 'B']
+[]
+[]
+Regla de movimiento aplicada: 4
+Backtracking 🔄
+Nivel de Profundidad: 6
+['A', 'C']
+['B']
+[]
+Regla de movimiento aplicada: 1
+Backtracking 🔄
+Nivel de Profundidad: 7
+['A']
+['B']
+['C']
+Regla de movimiento aplicada: 2
+Backtracking 🔄
+Nivel de Profundidad: 8
+['A']
+['B', 'C']
+[]
+Regla de movimiento aplicada: 1
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 3
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 9
+Backtracking 🔄
+Nivel de Profundidad: 9
+[]
+['B', 'C', 'A']
+[]
+Regla de movimiento aplicada: 7
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 3
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 5
+Backtracking 🔄
+Nivel de Profundidad: 8
+['A']
+[]
+['C', 'B']
+Regla de movimiento aplicada: 4
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 6
+Backtracking 🔄
+Nivel de Profundidad: 9
+['A', 'B']
+[]
+['C']
+Regla de movimiento aplicada: 2
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 4
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 5
+Regla de movimiento no aplicada - Estado repetido ❌
+Regla de movimiento aplicada: 8
+Backtracking 🔄
+Nivel de Profundidad: 9
+[]
+[]
+['C', 'B', 'A']
+Solucion encontrada ✅

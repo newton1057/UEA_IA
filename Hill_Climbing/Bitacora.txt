@@ -1,0 +1,141 @@
+Heuristica Hill Climbing 🚀
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Tablero inicial
+['*', 'R', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Tablero auxiliar
+['*', 'R', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: []
+Regla aplicada: 3
+Evaluacion: -3
+Evaluacion Estado: 0
+🤖 Robot aun no puede llegar a la meta!
+Tablero auxiliar
+['*', 'R', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: [3]
+Regla aplicada: 5
+Evaluacion: 1
+Evaluacion Estado: 0
+Regla aplicada: 5
+Evaluacion del estado: 1
+Tablero Actualizado
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', 'R', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', 'R', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: []
+Regla aplicada: 3
+Evaluacion: -3
+Evaluacion Estado: 1
+🤖 Robot aun no puede llegar a la meta!
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', 'R', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: [3]
+Regla aplicada: 4
+Evaluacion: 2
+Evaluacion Estado: 1
+Regla aplicada: 4
+Evaluacion del estado: 3
+Tablero Actualizado
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', 'R', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', 'R', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: []
+Regla aplicada: 1
+Evaluacion: 1
+Evaluacion Estado: 3
+Regla aplicada: 1
+Evaluacion del estado: 4
+Tablero Actualizado
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: []
+Regla aplicada: 2
+Evaluacion: -3
+Evaluacion Estado: 4
+🤖 Robot aun no puede llegar a la meta!
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: [2]
+Regla aplicada: 3
+Evaluacion: -3
+Evaluacion Estado: 4
+🤖 Robot aun no puede llegar a la meta!
+Tablero auxiliar
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Movimientos realizados: [2, 3]
+🤖 Robot no puede llegar a la meta!
+Maximo local alcanzado!
