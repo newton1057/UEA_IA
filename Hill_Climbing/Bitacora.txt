@@ -1,8 +1,9 @@
-Heuristica Hill Climbing 🚀
+Heuristica Beam Search 🚀
 Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
 Matricula: 2193076785 
 
-Tablero inicial
+Nodo en el nivel: 0
+Nodo Actual
 ['*', 'R', ' ', ' ', ' ', ' ']
 ['*', '*', ' ', ' ', ' ', ' ']
 ['*', ' ', '*', ' ', ' ', ' ']
@@ -10,34 +11,52 @@ Tablero inicial
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Tablero auxiliar
-['*', 'R', ' ', ' ', ' ', ' ']
-['*', '*', ' ', ' ', ' ', ' ']
-['*', ' ', '*', ' ', ' ', ' ']
-[' ', ' ', ' ', '*', ' ', ' ']
-['*', '*', '*', '*', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: []
+Evaluacion del nodo actual: 0
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 3
-Evaluacion: -3
-Evaluacion Estado: 0
-🤖 Robot aun no puede llegar a la meta!
-Tablero auxiliar
-['*', 'R', ' ', ' ', ' ', ' ']
+Evaluacion del nodo: -3
+['*', ' ', 'R', ' ', ' ', ' ']
 ['*', '*', ' ', ' ', ' ', ' ']
 ['*', ' ', '*', ' ', ' ', ' ']
 [' ', ' ', ' ', '*', ' ', ' ']
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: [3]
+ - Movimientos realizados: [3]
+ - Evaluacion del estado: -3
+ - Reglas: [3]
+ - Valores de evaluacion: [-3]
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 5
-Evaluacion: 1
-Evaluacion Estado: 0
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', 'R', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3, 5]
+ - Evaluacion del estado: 1
+ - Reglas: [3, 5]
+ - Valores de evaluacion: [-3, 1]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [3, 5]
+ - Valores de evaluacion: [-3, 1]
+ - Mejores evaluaciones: [1]
+ - Reglas mejores: [5]
+Mayor evaluacion: 1
+Regla aplicada: 5
+ - Movimientos no realizados: [1, 2, 3, 4]
 Regla aplicada: 5
 Evaluacion del estado: 1
-Tablero Actualizado
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 1
+Nodo Actual
 ['*', ' ', ' ', ' ', ' ', ' ']
 ['*', '*', 'R', ' ', ' ', ' ']
 ['*', ' ', '*', ' ', ' ', ' ']
@@ -45,34 +64,69 @@ Tablero Actualizado
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Tablero auxiliar
-['*', ' ', ' ', ' ', ' ', ' ']
-['*', '*', 'R', ' ', ' ', ' ']
-['*', ' ', '*', ' ', ' ', ' ']
-[' ', ' ', ' ', '*', ' ', ' ']
-['*', '*', '*', '*', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: []
+Evaluacion del nodo actual: 1
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 3
-Evaluacion: -3
-Evaluacion Estado: 1
-🤖 Robot aun no puede llegar a la meta!
-Tablero auxiliar
+Evaluacion del nodo: -3
 ['*', ' ', ' ', ' ', ' ', ' ']
-['*', '*', 'R', ' ', ' ', ' ']
+['*', '*', ' ', 'R', ' ', ' ']
 ['*', ' ', '*', ' ', ' ', ' ']
 [' ', ' ', ' ', '*', ' ', ' ']
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: [3]
+ - Movimientos realizados: [3]
+ - Evaluacion del estado: -2
+ - Reglas: [3]
+ - Valores de evaluacion: [-2]
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 4
-Evaluacion: 2
-Evaluacion Estado: 1
+Evaluacion del nodo: 2
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', 'R', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3, 4]
+ - Evaluacion del estado: 3
+ - Reglas: [3, 4]
+ - Valores de evaluacion: [-2, 3]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 5
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', 'R', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3, 4, 5]
+ - Evaluacion del estado: 2
+ - Reglas: [3, 4, 5]
+ - Valores de evaluacion: [-2, 3, 2]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [3, 4, 5]
+ - Valores de evaluacion: [-2, 3, 2]
+ - Mejores evaluaciones: [3, 2]
+ - Reglas mejores: [4, 5]
+Mayor evaluacion: 3
+Regla aplicada: 4
+ - Movimientos no realizados: [1, 2, 3]
 Regla aplicada: 4
 Evaluacion del estado: 3
-Tablero Actualizado
+ - Movimientos no realizados: [1, 2, 3, 4]
+Regla aplicada: 5
+Evaluacion del estado: 4
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 2
+Nodo Actual
 ['*', ' ', ' ', ' ', ' ', ' ']
 ['*', '*', ' ', ' ', ' ', ' ']
 ['*', 'R', '*', ' ', ' ', ' ']
@@ -80,55 +134,139 @@ Tablero Actualizado
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Tablero auxiliar
-['*', ' ', ' ', ' ', ' ', ' ']
-['*', '*', ' ', ' ', ' ', ' ']
-['*', 'R', '*', ' ', ' ', ' ']
-[' ', ' ', ' ', '*', ' ', ' ']
-['*', '*', '*', '*', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: []
+Evaluacion del nodo actual: 3
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 1
-Evaluacion: 1
-Evaluacion Estado: 3
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 4
+ - Reglas: [1]
+ - Valores de evaluacion: [4]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 4
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+['R', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 4]
+ - Evaluacion del estado: 4
+ - Reglas: [1, 4]
+ - Valores de evaluacion: [4, 4]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 5
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', 'R', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 4, 5]
+ - Evaluacion del estado: 4
+ - Reglas: [1, 4, 5]
+ - Valores de evaluacion: [4, 4, 4]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 4, 5]
+ - Valores de evaluacion: [4, 4, 4]
+ - Mejores evaluaciones: [4, 4]
+ - Reglas mejores: [1, 4]
+Mayor evaluacion: 4
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 5]
 Regla aplicada: 1
 Evaluacion del estado: 4
-Tablero Actualizado
+ - Movimientos no realizados: [2, 3, 5, 1]
+Regla aplicada: 4
+Evaluacion del estado: 5
+ - Movimientos no realizados: [2, 3, 5, 1, 4]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 2
+Nodo Actual
 ['*', ' ', ' ', ' ', ' ', ' ']
 ['*', '*', ' ', ' ', ' ', ' ']
-['*', ' ', '*', ' ', ' ', ' ']
-[' ', 'R', ' ', '*', ' ', ' ']
+['*', ' ', '*', 'R', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Tablero auxiliar
-['*', ' ', ' ', ' ', ' ', ' ']
-['*', '*', ' ', ' ', ' ', ' ']
-['*', ' ', '*', ' ', ' ', ' ']
-[' ', 'R', ' ', '*', ' ', ' ']
-['*', '*', '*', '*', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: []
-Regla aplicada: 2
-Evaluacion: -3
-Evaluacion Estado: 4
-🤖 Robot aun no puede llegar a la meta!
-Tablero auxiliar
-['*', ' ', ' ', ' ', ' ', ' ']
-['*', '*', ' ', ' ', ' ', ' ']
-['*', ' ', '*', ' ', ' ', ' ']
-[' ', 'R', ' ', '*', ' ', ' ']
-['*', '*', '*', '*', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-[' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: [2]
+Evaluacion del nodo actual: 4
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
 Regla aplicada: 3
-Evaluacion: -3
-Evaluacion Estado: 4
-🤖 Robot aun no puede llegar a la meta!
-Tablero auxiliar
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', 'R', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3]
+ - Evaluacion del estado: 1
+ - Reglas: [3]
+ - Valores de evaluacion: [1]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 4
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', 'R', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3, 4]
+ - Evaluacion del estado: 5
+ - Reglas: [3, 4]
+ - Valores de evaluacion: [1, 5]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 5
+Evaluacion del nodo: 2
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', 'R', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3, 4, 5]
+ - Evaluacion del estado: 6
+ - Reglas: [3, 4, 5]
+ - Valores de evaluacion: [1, 5, 6]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [3, 4, 5]
+ - Valores de evaluacion: [1, 5, 6]
+ - Mejores evaluaciones: [5, 6]
+ - Reglas mejores: [4, 5]
+Mayor evaluacion: 6
+Regla aplicada: 5
+ - Movimientos no realizados: [1, 2, 3]
+Regla aplicada: 4
+Evaluacion del estado: 5
+ - Movimientos no realizados: [1, 2, 3, 4]
+Regla aplicada: 5
+Evaluacion del estado: 7
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 3
+Nodo Actual
 ['*', ' ', ' ', ' ', ' ', ' ']
 ['*', '*', ' ', ' ', ' ', ' ']
 ['*', ' ', '*', ' ', ' ', ' ']
@@ -136,6 +274,703 @@ Tablero auxiliar
 ['*', '*', '*', '*', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
 [' ', ' ', ' ', ' ', ' ', ' ']
-Movimientos realizados: [2, 3]
-🤖 Robot no puede llegar a la meta!
-Maximo local alcanzado!
+Evaluacion del nodo actual: 4
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+['R', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [2]
+ - Evaluacion del estado: 1
+ - Reglas: [2]
+ - Valores de evaluacion: [1]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', 'R', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [2, 3]
+ - Evaluacion del estado: 1
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [1, 1]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [1, 1]
+ - Mejores evaluaciones: []
+ - Reglas mejores: []
+Mayor evaluacion: 1
+Regla aplicada: 2
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 3
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+['R', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 5
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [3]
+ - Evaluacion del estado: 2
+ - Reglas: [3]
+ - Valores de evaluacion: [2]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [3]
+ - Valores de evaluacion: [2]
+ - Mejores evaluaciones: []
+ - Reglas mejores: []
+Mayor evaluacion: 2
+Regla aplicada: 3
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 3
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', 'R', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 5
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', 'R', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [2]
+ - Evaluacion del estado: 2
+ - Reglas: [2]
+ - Valores de evaluacion: [2]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [2]
+ - Valores de evaluacion: [2]
+ - Mejores evaluaciones: []
+ - Reglas mejores: []
+Mayor evaluacion: 2
+Regla aplicada: 2
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 3
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', 'R', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 7
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 2
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 9
+ - Reglas: [1]
+ - Valores de evaluacion: [9]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', 'R']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 3]
+ - Evaluacion del estado: 4
+ - Reglas: [1, 3]
+ - Valores de evaluacion: [9, 4]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 5
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 3, 5]
+ - Evaluacion del estado: 8
+ - Reglas: [1, 3, 5]
+ - Valores de evaluacion: [9, 4, 8]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 3, 5]
+ - Valores de evaluacion: [9, 4, 8]
+ - Mejores evaluaciones: [9, 8]
+ - Reglas mejores: [1, 5]
+Mayor evaluacion: 9
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 4]
+Regla aplicada: 1
+Evaluacion del estado: 9
+ - Movimientos no realizados: [2, 3, 4, 1]
+Regla aplicada: 5
+Evaluacion del estado: 10
+ - Movimientos no realizados: [2, 3, 4, 1, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 4
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 9
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 10
+ - Reglas: [1]
+ - Valores de evaluacion: [10]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 3]
+ - Evaluacion del estado: 6
+ - Reglas: [1, 3]
+ - Valores de evaluacion: [10, 6]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 4
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 3, 4]
+ - Evaluacion del estado: 10
+ - Reglas: [1, 3, 4]
+ - Valores de evaluacion: [10, 6, 10]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 5
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 3, 4, 5]
+ - Evaluacion del estado: 10
+ - Reglas: [1, 3, 4, 5]
+ - Valores de evaluacion: [10, 6, 10, 10]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 3, 4, 5]
+ - Valores de evaluacion: [10, 6, 10, 10]
+ - Mejores evaluaciones: [10, 10]
+ - Reglas mejores: [1, 4]
+Mayor evaluacion: 10
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 5]
+Regla aplicada: 1
+Evaluacion del estado: 10
+ - Movimientos no realizados: [2, 3, 5, 1]
+Regla aplicada: 4
+Evaluacion del estado: 11
+ - Movimientos no realizados: [2, 3, 5, 1, 4]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 4
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 10
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 11
+ - Reglas: [1]
+ - Valores de evaluacion: [11]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2]
+ - Evaluacion del estado: 7
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [11, 7]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 4
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2, 4]
+ - Evaluacion del estado: 11
+ - Reglas: [1, 2, 4]
+ - Valores de evaluacion: [11, 7, 11]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 2, 4]
+ - Valores de evaluacion: [11, 7, 11]
+ - Mejores evaluaciones: [11, 11]
+ - Reglas mejores: [1, 4]
+Mayor evaluacion: 11
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 5]
+Regla aplicada: 1
+Evaluacion del estado: 11
+ - Movimientos no realizados: [2, 3, 5, 1]
+Regla aplicada: 4
+Evaluacion del estado: 12
+ - Movimientos no realizados: [2, 3, 5, 1, 4]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 5
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 10
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 11
+ - Reglas: [1]
+ - Valores de evaluacion: [11]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2]
+ - Evaluacion del estado: 7
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [11, 7]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2, 3]
+ - Evaluacion del estado: 7
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [11, 7, 7]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [11, 7, 7]
+ - Mejores evaluaciones: [11]
+ - Reglas mejores: [1]
+Mayor evaluacion: 11
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 4, 5]
+Regla aplicada: 1
+Evaluacion del estado: 11
+ - Movimientos no realizados: [2, 3, 4, 5, 1]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 5
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 11
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 12
+ - Reglas: [1]
+ - Valores de evaluacion: [12]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', 'R', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2]
+ - Evaluacion del estado: 8
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [12, 8]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2, 3]
+ - Evaluacion del estado: 8
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [12, 8, 8]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [12, 8, 8]
+ - Mejores evaluaciones: [12]
+ - Reglas mejores: [1]
+Mayor evaluacion: 12
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 4, 5]
+Regla aplicada: 1
+Evaluacion del estado: 12
+ - Movimientos no realizados: [2, 3, 4, 5, 1]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 5
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 11
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 12
+ - Reglas: [1]
+ - Valores de evaluacion: [12]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2]
+ - Evaluacion del estado: 8
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [12, 8]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [12, 8]
+ - Mejores evaluaciones: [12]
+ - Reglas mejores: [1]
+Mayor evaluacion: 12
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 4, 5]
+Regla aplicada: 1
+Evaluacion del estado: 12
+ - Movimientos no realizados: [2, 3, 4, 5, 1]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 5
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+Evaluacion del nodo actual: 12
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 1
+Evaluacion del nodo: 1
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+ - Movimientos realizados: [1]
+ - Evaluacion del estado: 13
+ - Reglas: [1]
+ - Valores de evaluacion: [13]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2]
+ - Evaluacion del estado: 9
+ - Reglas: [1, 2]
+ - Valores de evaluacion: [13, 9]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+[' ', ' ', ' ', ' ', ' ', ' ']
+ - Movimientos realizados: [1, 2, 3]
+ - Evaluacion del estado: 9
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [13, 9, 9]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [1, 2, 3]
+ - Valores de evaluacion: [13, 9, 9]
+ - Mejores evaluaciones: [13]
+ - Reglas mejores: [1]
+Mayor evaluacion: 13
+Regla aplicada: 1
+ - Movimientos no realizados: [2, 3, 4, 5]
+Regla aplicada: 1
+Evaluacion del estado: 13
+ - Movimientos no realizados: [2, 3, 4, 5, 1]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 6
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+Evaluacion del nodo actual: 11
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+ - Movimientos realizados: [2]
+ - Evaluacion del estado: 8
+ - Reglas: [2]
+ - Valores de evaluacion: [8]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
+ - Movimientos realizados: [2, 3]
+ - Evaluacion del estado: 8
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [8, 8]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [8, 8]
+ - Mejores evaluaciones: []
+ - Reglas mejores: []
+Mayor evaluacion: 8
+Regla aplicada: 2
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+Nodo en el nivel: 6
+Nodo Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', 'R', ' ', ' ']
+Evaluacion del nodo actual: 12
+Evaluacion de los posibles movimientos
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 2
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', 'R', ' ', ' ', ' ']
+ - Movimientos realizados: [2]
+ - Evaluacion del estado: 9
+ - Reglas: [2]
+ - Valores de evaluacion: [9]
+ ** Tablero con posible movimiento ** 
+Regla aplicada: 3
+Evaluacion del nodo: -3
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', 'R', ' ']
+ - Movimientos realizados: [2, 3]
+ - Evaluacion del estado: 9
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [9, 9]
+ ** Tablero con posible movimiento ** 
+ ** No se puede aplicar ninguna regla **
+Evaluacion de las reglas posibles
+ - Reglas: [2, 3]
+ - Valores de evaluacion: [9, 9]
+ - Mejores evaluaciones: []
+ - Reglas mejores: []
+Mayor evaluacion: 9
+Regla aplicada: 2
+ - Movimientos no realizados: [1, 2, 3, 4, 5]
+ ** No se puede aplicar ninguna regla **
+🤖 Robot llego a la meta!
+Tablero Actual
+['*', ' ', ' ', ' ', ' ', ' ']
+['*', '*', ' ', ' ', ' ', ' ']
+['*', ' ', '*', ' ', ' ', ' ']
+[' ', ' ', ' ', '*', ' ', ' ']
+['*', '*', '*', '*', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', ' ']
+[' ', ' ', ' ', ' ', ' ', 'R']
