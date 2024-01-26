@@ -5,6 +5,7 @@ from View.GUI_Modos_Juego import Modos_Juego
 from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_Text
 from pygame import mixer
 from PIL import Image, ImageTk, ImageFilter
+import time
 
 class MenuJuego:
     def __init__(self, opciones, ventana):
@@ -70,24 +71,40 @@ class JuegoApp:
         self.ventana.geometry("600x600")
         self.ventana.title("The Game")
         self.ventana.configure(bg=Color_Primary)
-        ##self.ventana.resizable(False, False)
+        self.ventana.resizable(False, False)
         center_window(self.ventana)
 
         self.frame = tk.Frame(self.ventana, width=600, height=600)
         self.frame.pack(fill='both', expand=1)
+
+        # Cargar la imagen
+        imagen_b = Image.open("./Textures/Background.jpg")  # Reemplaza "ruta_de_la_imagen.jpg" con la ruta de tu imagen
+         # Escalar la imagen al tamaño del Frame
+        imagen_redimensionada = imagen_b.resize((600, 600))
+
+        imagen_b = ImageTk.PhotoImage(imagen_redimensionada)
+
+       
+
+        # Agregar la imagen al fondo del Frame usando un Label
+        fondo_label = tk.Label(self.frame, image=imagen_b)
+        fondo_label.place(relwidth=1, relheight=1)
+
         self.frame.config(cursor="circle")
         self.frame.config(bg=Color_Primary)
         self.frame.config(bd=20)
         self.frame.config(relief="sunken")
-
+        # Asegurarse de mantener una referencia a la imagen para evitar que sea eliminada por el recolector de basura
+        self.frame.imagen = imagen_b
 
         self.title_label = tk.Label(self.frame, text="The Game", fg=Color_Text, bg="#489848", font=("Game Over", 200))
         self.title_label.pack(pady=(100, 0))
+        
 
         self.subtitle_label = tk.Label(self.frame, text="For IA by Eduardo Bernal", fg="#377537", bg="#489848", font=("Game Over", 60))
         self.subtitle_label.pack(pady=(0, 50))
 
-        self.canvas = tk.Canvas(self.frame, width=64, height=64, highlightthickness=0, bg=Color_Primary)
+        self.canvas = tk.Canvas(self.frame, width=600, height=64, highlightthickness=0, bg=Color_Primary)
         
         self.canvas.pack(pady=(0, 0))
 
@@ -100,10 +117,15 @@ class JuegoApp:
         # Mostrar el primer frame
         self.current_frame_index = 0
         self.current_frame = ImageTk.PhotoImage(self.gif_frames[self.current_frame_index])
-        self.canvas.create_image(0, 0, anchor=tk.NW, image=self.current_frame)
+        #self.canvas.create_image(0, 0, anchor=tk.NW, image=self.current_frame)
 
         # Iniciar la animación
+        
+        self.position = 0
+        self.direction = "R"
         self.animate()
+        
+        
 
         self.menu_juego = MenuJuego(["- INICIAR PARTIDA -", "- SALIR -"], self.frame)
 
@@ -125,13 +147,27 @@ class JuegoApp:
         return frames
 
     def animate(self):
+        if self.direction == "R":
+            self.position += 10
+        
+        if self.position == 500:
+            self.direction = "L"
+        
+        if self.direction == "L":
+            self.position -= 10
+
+        if self.position == 0:
+            self.direction = "R"
+            self.position = 0
+
         # Cambiar al siguiente frame
         self.current_frame_index = (self.current_frame_index + 1) % len(self.gif_frames)
         self.current_frame = ImageTk.PhotoImage(self.gif_frames[self.current_frame_index])
-
+        
         # Actualizar la imagen en el lienzo
-        self.canvas.create_image(0, 0, anchor=tk.NW, image=self.current_frame)
-
+        self.canvas.create_image(self.position, 0, anchor=tk.NW, image=self.current_frame)
+        
+        
         # Llamar a la función animate después de un cierto tiempo (en milisegundos)
         self.frame.after(100, self.animate)
     

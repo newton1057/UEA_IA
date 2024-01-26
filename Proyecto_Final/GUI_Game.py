@@ -27,6 +27,7 @@ class Game:
 
         self.title_label = tk.Label(self.ventana, text="** Hill Climbing **", fg=Color_Text, bg=Color_Primary, font=("Game Over", 70))
         self.title_label.pack(pady=(20, 20))
+        
         self.ventana.bind("<Up>", self.on_arrow_up)
         self.ventana.bind("<Down>", self.on_arrow_down)
         self.ventana.bind("<Left>", self.on_arrow_left)
