@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import font
 from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_Text
+from PIL import Image, ImageTk, ImageFilter
 
 class MenuJuego:
     def __init__(self, opciones, ventana):
@@ -43,25 +44,38 @@ class MenuJuego:
 
         elif opcion_seleccionada == "Hill Climbing":
             ventana.destroy()
-            from GUI_Game import Game
+            from View.GUI_Game import Game
             
-            Tablero = [
-                ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-                ['*', '*', 'R', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', '*', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', '*', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', '*', '*', '*', '*', '*', '*', '*', '*', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'],
-                ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
-            ]
-            app = Game(Tablero)
-            app.Render()
+            from Model.Config_GameBoard import Config_GameBoard
+
+            Tablero = Config_GameBoard()
+            
+            app = Game(" Algoritmo Hill Climbing ",Tablero)
+            #app.Render()
             #app.Render_Limits()
+            app.run()
+        
+        elif opcion_seleccionada == "Steepest":
+            ventana.destroy()
+            from View.GUI_Game import Game
+            
+            from Model.Config_GameBoard import Config_GameBoard
+
+            Tablero = Config_GameBoard()
+
+            app = Game(" Algoritmo Steepest ",Tablero)
+            app.Render()
+            app.run()
+
+        elif opcion_seleccionada == "Beam Search":
+            ventana.destroy()
+            from View.GUI_Game import Game
+            from Model.Config_GameBoard import Config_GameBoard
+
+            Tablero = Config_GameBoard()
+
+            app = Game(" Algoritmo Beam Search ",Tablero)
+            app.Render()
             app.run()
             
 
@@ -93,13 +107,35 @@ class Modos_Juego:
         self.ventana.resizable(False, False)
         center_window(self.ventana)
 
-        self.title_label = tk.Label(self.ventana, text="** MODOS DE JUEGO **", fg=Color_Text, bg=Color_Primary, font=("Game Over", 100))
+        self.frame = tk.Frame(self.ventana, width=600, height=600)
+        self.frame.pack(fill='both', expand=1)
+
+        # Cargar la imagen de fondo
+        imagen_b = Image.open("./Textures/Background_Alternative.jpg")
+        imagen_redimensionada = imagen_b.resize((600, 600))
+
+        imagen_b = ImageTk.PhotoImage(imagen_redimensionada)
+
+        # Escalar la imagen al tamaño del Frame
+        fondo_label = tk.Label(self.frame, image=imagen_b)
+        fondo_label.place(relwidth=1, relheight=1)
+
+        self.frame.config(cursor="circle")
+        self.frame.config(bg=Color_Primary)
+        self.frame.config(bd=20)
+        self.frame.config(relief="sunken")
+
+        self.frame.imagen = imagen_b
+
+
+
+        self.title_label = tk.Label(self.frame, text=" MODOS DE JUEGO ", fg=Color_Text, bg=Color_Primary, font=("Game Over", 100))
         self.title_label.pack(pady=(50, 20))
 
-        self.subtitle_label = tk.Label(self.ventana, text="Algoritmos a utilizar", fg="#377537", bg=Color_Primary, font=("Game Over", 60))
+        self.subtitle_label = tk.Label(self.frame, text=" Algoritmos a utilizar ", fg="#377537", bg=Color_Primary, font=("Game Over", 60))
         self.subtitle_label.pack(pady=(80,  20))
 
-        self.menu_juego = MenuJuego(["Hill Climbing", "Steepest", "Beam Search", "Atrás"], self.ventana)
+        self.menu_juego = MenuJuego(["Hill Climbing", "Steepest", "Beam Search", "Atrás"], self.frame)
 
         self.ventana.bind("<Up>", self.on_arrow_up)
         self.ventana.bind("<Down>", self.on_arrow_down)

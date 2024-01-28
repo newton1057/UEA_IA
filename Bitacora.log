@@ -10,3 +10,117 @@ Frase: tigre come
 Frase: tigre come carne 
 No hay mas relaciones
 La frase final es: El tigre come carne 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase con promt
+La frase inicial es: tigre
+Generarando Frase.... 
+Frase: tigre 
+Conector elegido: se considera un
+Frase: tigre se considera un tipo de 
+Frase: tigre se considera un tipo de mamifero 
+Conector elegido: entra en un
+Frase: tigre se considera un tipo de mamifero entra en un tipo de 
+Frase: tigre se considera un tipo de mamifero entra en un tipo de animal 
+Conector elegido: y
+Frase: tigre se considera un tipo de mamifero entra en un tipo de animal y puede 
+Frase: tigre se considera un tipo de mamifero entra en un tipo de animal y puede moverse 
+No hay mas relaciones
+La frase final es: tigre tigre se considera un tipo de mamifero entra en un tipo de animal y puede moverse 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase con promt
+La frase inicial es: nd
+Generarando Frase.... 
+No se encontro el concepto
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  tigre 
+Frase:  tigre come 
+Frase:  tigre come carne 
+No hay mas relaciones
+La frase final es:  tigre come carne 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  tigre 
+Frase:  tigre come 
+Frase:  tigre come carne 
+No hay mas relaciones
+La frase final es:  tigre come carne 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  avestruz 
+Frase:  avestruz vuela 
+Frase:  avestruz vuela mal 
+No hay mas relaciones
+La frase final es:  avestruz vuela mal 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  albatros 
+Frase:  albatros vuela 
+Frase:  albatros vuela muy bien 
+No hay mas relaciones
+La frase final es:  albatros vuela muy bien 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  avestruz 
+Conector elegido: se identifica como un
+Frase:  avestruz se identifica como un tipo de 
+Frase:  avestruz se identifica como un tipo de ave 
+Conector elegido: se identifica como un
+Frase:  avestruz se identifica como un tipo de ave se identifica como un tipo de 
+Frase:  avestruz se identifica como un tipo de ave se identifica como un tipo de animal 
+Conector elegido: que
+Frase:  avestruz se identifica como un tipo de ave se identifica como un tipo de animal que puede 
+Frase:  avestruz se identifica como un tipo de ave se identifica como un tipo de animal que puede sentir 
+No hay mas relaciones
+La frase final es:  avestruz se identifica como un tipo de ave se identifica como un tipo de animal que puede sentir 
+Creando una Red Semantica
+Desarrollado por: Eduardo Isaac Dávila Bernal 🤓
+Matricula: 2193076785 
+
+Creando Frase aleatoria
+Generarando Frase.... 
+Frase:  
+Frase:  albatros 
+Conector elegido: se considera un
+Frase:  albatros se considera un tipo de 
+Frase:  albatros se considera un tipo de ave 
+Conector elegido: y
+Frase:  albatros se considera un tipo de ave y vuela 
+Frase:  albatros se considera un tipo de ave y vuela bien 
+No hay mas relaciones
+La frase final es:  albatros se considera un tipo de ave y vuela bien 

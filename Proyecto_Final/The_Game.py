@@ -1,21 +1,22 @@
 from View.GUI_Principal import JuegoApp
-from View.GUI_Modos_Juego import Modos_Juego
 from pygame import mixer
-
 
 mixer.init()
 
-def reproducir_musica():
-    mixer.music.load("Sounds/Sound_Menu.mp3")  # Reemplaza "tu_archivo.wav" con la ruta de tu archivo .wav
+# Reproduce la música de fondo del juego.
+def play_music():
+    mixer.music.load("Sounds/Sound_Menu.mp3")
     mixer.music.play(-1) 
-    mixer.music.set_volume(0.1)
-    
+    mixer.music.set_volume(0.2)
+
+# Detiene la reproducción de la música de fondo del juego.    
 def detener_musica():
-    print("Deteniendo musica")
     mixer.music.stop()
 
+# Función principal del juego.
 def main():
-    reproducir_musica()
+    # Reproduce la música de fondo, crea una instancia de la clase JuegoApp y la ejecuta.
+    play_music()
     app = JuegoApp()
     app.run()
 
