@@ -6,6 +6,7 @@ from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_
 from Algorithms.Hill_Climbing import Hill_Climbing , Main
 from tkinter import messagebox
 from Model.Config_Objetive import Read_JSON, Update_JSON
+import logging
 
 class Main_Game:
     def __init__(self, opciones, ventana):
@@ -16,7 +17,6 @@ class Main_Game:
             opciones (list): Lista de opciones del menú.
             ventana (tkinter.Tk): Ventana principal del juego.
         """
-
         print("Iniciando menu de juego")
         print("Opciones: ", opciones)
 
@@ -68,8 +68,10 @@ class Main_Game:
         opcion_seleccionada = self.opciones[self.indice_opcion_actual]
 
         if opcion_seleccionada == "- NO -":
+            logging.info('Se ha seleccionado la opción "NO" en el menú de juego.')
             return 0
         elif opcion_seleccionada == "- SI -":
+            logging.info('Se ha seleccionado la opción "SI" en el menú de juego.')
             return 1
             
 
@@ -168,8 +170,6 @@ class GUI_Update_GameBoard:
         self.ventana.bind("<m>", self.on_letter_m)
         self.ventana.bind("<M>", self.on_letter_m)
         
-    
-    
     def get_Tablero(self):
         return self.tablero
      
@@ -266,19 +266,16 @@ class GUI_Update_GameBoard:
         self.canvas.create_line(Axis_X_Objetive, Axis_Y_Objetive+40, Axis_X_Objetive+40, Axis_Y_Objetive, fill="red", width=10)
 
     def Update_GameBoard_Obstacle(self, x, y):
-        print("Actualizando tablero")
+        logging.info('Se ha actualizado el tablero del juego. Se ha añadido un obstáculo en la posición (' + str(x) + ', ' + str(y) + ').')
         self.tablero[y][x] = "*"
     
     def Update_GameBoard_Robot(self, x, y):
-        print("Actualizando tablero")
+        logging.info('Se ha actualizado el tablero del juego. Se ha añadido un robot en la posición (' + str(x) + ', ' + str(y) + ').')
         self.tablero[y][x] = "R"
     
     def Update_GameBoard_Empty(self, x, y):
-        print("Actualizando tablero")
+        logging.info('Se ha actualizado el tablero del juego. Se ha eliminado un elemento en la posición (' + str(x) + ', ' + str(y) + ').')
         self.tablero[y][x] = " "
-
-
-
 
     def Render_Limits(self):
         print("Renderizando")
@@ -365,7 +362,6 @@ class GUI_Update_GameBoard:
         self.Update_GameBoard_Empty(self.Objetive_X, self.Objetive_Y)
         self.Objetive_X = self.x_puntero
         self.Objetive_Y = self.y_puntero
-        #self.Update_GameBoard_Obstacle(self.Objetive_X, self.Objetive_Y)
         self.frame.after_cancel(self.actualizar_puntero)
         self.canvas.delete("all")
         self.canvas.destroy()
@@ -407,10 +403,6 @@ class GUI_Update_GameBoard:
             self.Confirmacion = 0
             self.Render()
 
-
-
-        
     def run(self):
+        logging.info('Se ha iniciado la ventana de configuración del Game Board.')
         self.ventana.mainloop()
-        
-        

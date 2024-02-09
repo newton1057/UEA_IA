@@ -4,6 +4,7 @@ from View.GUI_Modos_Juego import Modos_Juego
 from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_Text
 from pygame import mixer
 from PIL import Image, ImageTk, ImageFilter
+import logging
 
 class Main_Game:
     def __init__(self, opciones, ventana):
@@ -61,19 +62,16 @@ class Main_Game:
         """
         opcion_seleccionada = self.opciones[self.indice_opcion_actual]
         if opcion_seleccionada == "- ATRAS -":
-            
             ventana.destroy()
+            logging.info('Se ha regresado al menú principal del juego.')
             from View.GUI_Principal import JuegoApp
             app = JuegoApp()
             app.run()
             
-        elif opcion_seleccionada == "- INICIAR PARTIDA -":
-            ventana.destroy()
-            app = Modos_Juego()
-            app.run()
 
         elif opcion_seleccionada == "- MODIFICAR GAME BOARD -":
             ventana.destroy()
+            logging.info('Se ha seleccionado la opción de modificar el Game Board.')
             from View.GUI_Update_GameBoard import GUI_Update_GameBoard
             from Model.Config_GameBoard import Config_GameBoard
 
@@ -262,4 +260,5 @@ class GUI_Settings:
         """
         Método para ejecutar la aplicación principal del juego.
         """
+        logging.info('Se ha iniciado la GUI_Settings del juego.')
         self.ventana.mainloop()

@@ -267,6 +267,7 @@ imported by:
 <span class="moduletype">NamespacePackage</span>  <div class="import">
 imported by:
     <a href="#Model.Config_GameBoard">Model.Config_GameBoard</a>
+ &#8226;   <a href="#Model.Config_Objetive">Model.Config_Objetive</a>
 
   </div>
 
@@ -284,6 +285,24 @@ imports:
 imported by:
     <a href="#View.GUI_Modos_Juego">View.GUI_Modos_Juego</a>
  &#8226;   <a href="#View.GUI_Settings">View.GUI_Settings</a>
+ &#8226;   <a href="#View.GUI_Update_GameBoard">View.GUI_Update_GameBoard</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Model.Config_Objetive"></a>
+  <a target="code" href="/Users/eduardoisaacdavilabernal/Desktop/IA/Proyecto_Final/Model/Config_Objetive.py" type="text/plain"><tt>Model.Config_Objetive</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#Model">Model</a>
+ &#8226;   <a href="#json">json</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#View.GUI_Game">View.GUI_Game</a>
  &#8226;   <a href="#View.GUI_Update_GameBoard">View.GUI_Update_GameBoard</a>
 
   </div>
@@ -344,6 +363,7 @@ imported by:
 imports:
     <a href="#Algorithms.Hill_Climbing">Algorithms.Hill_Climbing</a>
  &#8226;   <a href="#Config.config">Config.config</a>
+ &#8226;   <a href="#Model.Config_Objetive">Model.Config_Objetive</a>
  &#8226;   <a href="#PIL">PIL</a>
  &#8226;   <a href="#View">View</a>
  &#8226;   <a href="#tkinter">tkinter</a>
@@ -444,6 +464,7 @@ imports:
     <a href="#Algorithms.Hill_Climbing">Algorithms.Hill_Climbing</a>
  &#8226;   <a href="#Config.config">Config.config</a>
  &#8226;   <a href="#Model.Config_GameBoard">Model.Config_GameBoard</a>
+ &#8226;   <a href="#Model.Config_Objetive">Model.Config_Objetive</a>
  &#8226;   <a href="#PIL">PIL</a>
  &#8226;   <a href="#View">View</a>
  &#8226;   <a href="#View.GUI_Settings">View.GUI_Settings</a>
@@ -787,6 +808,23 @@ imported by:
 imported by:
     <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
  &#8226;   <a href="#io">io</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="_json"></a>
+  <tt>_json</tt> <span class="moduletype"><tt>/opt/homebrew/Cellar/python@3.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/lib-dynload/_json.cpython-312-darwin.so</tt></span>  <div class="import">
+imports:
+    <a href="#json.decoder">json.decoder</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#json.decoder">json.decoder</a>
+ &#8226;   <a href="#json.encoder">json.encoder</a>
+ &#8226;   <a href="#json.scanner">json.scanner</a>
 
   </div>
 
@@ -1613,6 +1651,7 @@ imported by:
  &#8226;   <a href="#encodings.utf_8_sig">encodings.utf_8_sig</a>
  &#8226;   <a href="#encodings.uu_codec">encodings.uu_codec</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
+ &#8226;   <a href="#json">json</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#tokenize">tokenize</a>
 
@@ -5808,6 +5847,85 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="json"></a>
+  <a target="code" href="/opt/homebrew/Cellar/python%403.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py" type="text/plain"><tt>json</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#codecs">codecs</a>
+ &#8226;   <a href="#json.decoder">json.decoder</a>
+ &#8226;   <a href="#json.encoder">json.encoder</a>
+ &#8226;   <a href="#json.scanner">json.scanner</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#Model.Config_Objetive">Model.Config_Objetive</a>
+ &#8226;   <a href="#json.decoder">json.decoder</a>
+ &#8226;   <a href="#json.encoder">json.encoder</a>
+ &#8226;   <a href="#json.scanner">json.scanner</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="json.decoder"></a>
+  <a target="code" href="/opt/homebrew/Cellar/python%403.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/decoder.py" type="text/plain"><tt>json.decoder</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_json">_json</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#json.scanner">json.scanner</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#_json">_json</a>
+ &#8226;   <a href="#json">json</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="json.encoder"></a>
+  <a target="code" href="/opt/homebrew/Cellar/python%403.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py" type="text/plain"><tt>json.encoder</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_json">_json</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#json">json</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="json.scanner"></a>
+  <a target="code" href="/opt/homebrew/Cellar/python%403.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/scanner.py" type="text/plain"><tt>json.scanner</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_json">_json</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#json">json</a>
+ &#8226;   <a href="#json.decoder">json.decoder</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="keyword"></a>
   <a target="code" href="/opt/homebrew/Cellar/python%403.12/3.12.1_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/keyword.py" type="text/plain"><tt>keyword</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -6422,6 +6540,9 @@ imported by:
  &#8226;   <a href="#importlib.metadata._text">importlib.metadata._text</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#ipaddress">ipaddress</a>
+ &#8226;   <a href="#json.decoder">json.decoder</a>
+ &#8226;   <a href="#json.encoder">json.encoder</a>
+ &#8226;   <a href="#json.scanner">json.scanner</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#pathlib">pathlib</a>

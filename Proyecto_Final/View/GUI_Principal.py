@@ -6,6 +6,7 @@ from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_
 from pygame import mixer
 
 import time
+import logging
 
 class Main_Game:
     def __init__(self, opciones, ventana):
@@ -65,14 +66,17 @@ class Main_Game:
         if opcion_seleccionada == "- SALIR -":
             from The_Game import detener_musica
             detener_musica()
+            logging.info('Se ha seleccionado la opción de salir.')
             ventana.destroy()
         elif opcion_seleccionada == "- INICIAR PARTIDA -":
             ventana.destroy()
+            logging.info('Se ha seleccionado la opción de iniciar partida.')
             app = Modos_Juego()
             app.run()
 
         elif opcion_seleccionada == "-CONFIGURACIÓN-":
             ventana.destroy()
+            logging.info('Se ha seleccionado la opción de configuración.')
             from View.GUI_Settings import GUI_Settings
             app = GUI_Settings()
             app.run()
@@ -130,8 +134,6 @@ class JuegoApp:
 
         imagen_b = ImageTk.PhotoImage(imagen_redimensionada)
 
-       
-
         # Agregar la imagen al fondo del Frame usando un Label
         fondo_label = tk.Label(self.frame, image=imagen_b)
         fondo_label.place(relwidth=1, relheight=1)
@@ -140,6 +142,7 @@ class JuegoApp:
         self.frame.config(bg=Color_Primary)
         self.frame.config(bd=20)
         self.frame.config(relief="sunken")
+
         # Asegurarse de mantener una referencia a la imagen para evitar que sea eliminada por el recolector de basura
         self.frame.imagen = imagen_b
 
@@ -163,14 +166,11 @@ class JuegoApp:
         # Mostrar el primer frame
         self.current_frame_index = 0
         self.current_frame = ImageTk.PhotoImage(self.gif_frames[self.current_frame_index])
-        #self.canvas.create_image(0, 0, anchor=tk.NW, image=self.current_frame)
 
         # Iniciar la animación
-        
         self.position = 0
         self.direction = "R"
         self.animate()
-        
 
         self.menu_juego = Main_Game(["- INICIAR PARTIDA -","-CONFIGURACIÓN-","- SALIR -"], self.frame)
 
@@ -221,7 +221,6 @@ class JuegoApp:
         # Actualizar la imagen en el lienzo
         self.canvas.create_image(self.position, 0, anchor=tk.NW, image=self.current_frame)
         
-        
         # Llamar a la función animate después de un cierto tiempo (en milisegundos)
         self.frame.after(100, self.animate)
     
@@ -257,4 +256,5 @@ class JuegoApp:
         """
         Método para ejecutar la aplicación principal del juego.
         """
+        logging.info('Se ha iniciado la GUI_Principal del juego.')
         self.ventana.mainloop()

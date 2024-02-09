@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import font
 from Config.config import Color_Primary, Color_Text, Color_Button, Color_Button_Text
 from PIL import Image, ImageTk, ImageFilter
+import logging
 
 class MenuJuego:
     def __init__(self, opciones, ventana):
@@ -38,44 +39,65 @@ class MenuJuego:
 
         if opcion_seleccionada == "Atrás":
             ventana.destroy()
+            logging.info('Se ha regresado al menú principal.')
             from View.GUI_Principal import JuegoApp
             app = JuegoApp()
             app.run()
 
         elif opcion_seleccionada == "Hill Climbing":
             ventana.destroy()
-            from View.GUI_Game import Game
+            logging.info('Se ha seleccionado el algoritmo Hill Climbing.')
+            from View.GUI_Game_Hill_Climbing import Game
+            from Model.Config_GameBoard import Config_GameBoard
+
+            Tablero = Config_GameBoard()
+
+            app = Game(" Algoritmo Hill Climbing Original ",Tablero)
+            app.run()
             
+
+        elif opcion_seleccionada == "Hill Climbing Alternativo":
+            ventana.destroy()
+            logging.info('Se ha seleccionado el algoritmo Hill Climbing Alternativo.')
+            from View.GUI_Game_Hill_Climbing_Alternativo import Game
             from Model.Config_GameBoard import Config_GameBoard
 
             Tablero = Config_GameBoard()
             
-            app = Game(" Algoritmo Hill Climbing ",Tablero)
-            #app.Render()
-            #app.Render_Limits()
+            app = Game(" Algoritmo Hill Climbing Alternativo",Tablero)
             app.run()
         
         elif opcion_seleccionada == "Steepest":
             ventana.destroy()
-            from View.GUI_Game import Game
-            
+            logging.info('Se ha seleccionado el algoritmo Steepest.')
+            from View.GUI_Game_Steepest import Game
             from Model.Config_GameBoard import Config_GameBoard
 
             Tablero = Config_GameBoard()
 
-            app = Game(" Algoritmo Steepest ",Tablero)
-            app.Render()
+            app = Game(" Algoritmo Steepest Original ",Tablero)
+            app.run()
+
+        elif opcion_seleccionada == "Steepest Alternativo":
+            ventana.destroy()
+            logging.info('Se ha seleccionado el algoritmo Steepest Alternativo.')
+            from View.GUI_Game_Steepest_Alternativo import Game
+            from Model.Config_GameBoard import Config_GameBoard
+
+            Tablero = Config_GameBoard()
+
+            app = Game(" Algoritmo Steepest Alternativo ",Tablero)
             app.run()
 
         elif opcion_seleccionada == "Beam Search":
             ventana.destroy()
-            from View.GUI_Game import Game
+            logging.info('Se ha seleccionado el algoritmo Beam Search.')
+            from View.GUI_Game_Beam_Search import Game
             from Model.Config_GameBoard import Config_GameBoard
 
             Tablero = Config_GameBoard()
 
             app = Game(" Algoritmo Beam Search ",Tablero)
-            app.Render()
             app.run()
             
 
@@ -127,15 +149,13 @@ class Modos_Juego:
 
         self.frame.imagen = imagen_b
 
-
-
         self.title_label = tk.Label(self.frame, text=" MODOS DE JUEGO ", fg=Color_Text, bg=Color_Primary, font=("Game Over", 100))
         self.title_label.pack(pady=(50, 20))
 
         self.subtitle_label = tk.Label(self.frame, text=" Algoritmos a utilizar ", fg="#377537", bg=Color_Primary, font=("Game Over", 60))
         self.subtitle_label.pack(pady=(80,  20))
 
-        self.menu_juego = MenuJuego(["Hill Climbing", "Steepest", "Beam Search", "Atrás"], self.frame)
+        self.menu_juego = MenuJuego(["Hill Climbing", "Hill Climbing Alternativo", "Steepest", "Steepest Alternativo","Beam Search", "Atrás"], self.frame)
 
         self.ventana.bind("<Up>", self.on_arrow_up)
         self.ventana.bind("<Down>", self.on_arrow_down)
@@ -153,4 +173,5 @@ class Modos_Juego:
         self.menu_juego.seleccionar_opcion(self.ventana)
 
     def run(self):
+        logging.info('Se ha iniciado el menú de modos de juego.')
         self.ventana.mainloop()
